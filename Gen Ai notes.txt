@@ -41,8 +41,39 @@ Safe Guard to prompt injection: use system prompt
 
 
 
-Foundation Of Generative AI:
+FineTuning :
+Foundation model -> FineTuning model 
+[pre-trained]       [you re-train for your purpose]
 
-    
+-> instruction model - works on chain of thought 
+-> the tokenizationer name is same as the model , we used 
+-> device_map = auto - if model loaded in gpu and Tokenizationer is loaded in cpu , we got error. To rectified it  -  device_map = cpu / gpu
+-> tokenizer.decode - is need to see the response from llm becuz the llm give responses in vector format only
+-> based on the model we take and the prompt we gave , the accuary of the llm response is increased    
+-> reasoning model - take your input and generate the model and ask itself the response is correct or not 
+-> pipeline - class which have tokenizationer and model
+-> context length - no of words in user prompt
 
+//To train model
+Inorder to train model, need to load entire model to VRAM in GPU.
+
+torch= torch.bfloat32
+torch= torch.bfloat16
+Precistion is 32 bits.
+Formula -> N *4
+78 paramter model will take 28GB VRAM
+
+Precision is 16 bits
+then it will take only 14GB for 7B parameters
+
+If you have 12GB of RAM,
+Then you have to use 1 Quantization 8 bits
+
+then reduce 32 bit to whatever precision you need.
+8 bits precision 7B for 7GB for VRAM
+4 bits precision -> Not available for most of the models
+
+:
+
+3.5GB of VRAM
 
