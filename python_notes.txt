@@ -1,0 +1,6 @@
+# create virtual env : python -m venv venv 
+# to Activate the virtual env:  .\venv\Scripts\Activate
+# to Deactivate: Deactivate
+# to install package from txt file: pip install -r "fileName"
+
+

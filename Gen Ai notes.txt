@@ -1,0 +1,48 @@
+Tokenization:
+
+Modal used : Mistral
+
+Output: Based on token id, it predicts the next token
+
+-> Temperature: It controls the randomness of predictions -> close to 0 -> high Reasoning, low creative
+                                                          -> close to 1 -> low Reasoning, high creative
+
+    top_k Sampling : set a limit to check the predictions
+    top_p Sampling: instead of the limit, use culimative the top -> pick the highest weight one
+
+System prompt:
+    Provide a instruction to ai model to answer user questions
+
+user prompting methods:
+    ->Zero shot prompting: user doesn't give a example - > model learn from large data set  -> struggle to solve complex problems
+    ->Few shot prompting : user give some example 
+    -> Meta prompting: give metadata of solutions + Few shot prompting
+        Characteristics: structurced oriented approach
+    -> chain of thought prompting : give few example [few shot ] + asking new questions also
+       variants of cot prompting: Zero-shot cot prompting , Auto cot -> two process: questions clustring + demostration Sampling
+
+    -> ReACT prompting [Reason + Act]: Iterative prompting
+
+RAG [Retrieval Agumented Generation]: Indexing -> Retrieval -> Generation 
+    -> RAG/ ReACT -> LLM or WEB
+    -> Retrieval type: Sparse Retrieval -> based on shared key word [Top N]
+                       Dense Retrieval  -> based on similar meaning  even user doesn't share
+                       Grounding -> method of Providing related info that are not part of trained data 
+    -> Function Calling : ablitiy of the method to connect to external tools to 
+
+Chanlleges: 
+    prompt injection:
+        -> Direct prompting injection : Directly given by user
+        -> InDirect prompting injection: 
+    Hallucination : 
+
+Safe Guard to prompt injection: use system prompt
+
+
+
+
+Foundation Of Generative AI:
+
+    
+
+

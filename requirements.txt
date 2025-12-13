@@ -1,0 +1,15 @@
+transformers
+torch
+python-dotenv
+accelerate
+sentencepiece 
+protobuf
+groq
+langgraph
+langchain 
+langchain_groq 
+langchain-community
+sentence-transformers
+pinecone
+pinecone-client
+huggingface-hub
